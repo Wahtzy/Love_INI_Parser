@@ -20,7 +20,7 @@
 	SOFTWARE.
 --]]
 --- Lua INI Parser.
--- It has never been that simple to use INI files with Lua.
+-- It has never been that simple to use INI files with Love2D.
 --@author Dynodzzo, VideahGams
 
 local LIP = {};

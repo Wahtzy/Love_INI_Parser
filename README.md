@@ -29,7 +29,7 @@ local data =
 	{
 		width = 960,
 		height = 544,
-		caption = 'Window\'s caption',
+		caption = 'Windows caption',
 		focused = true,
 	},
 };
@@ -59,7 +59,7 @@ local LIP = require 'LIP';
 local data = LIP.load('savedata.ini');
 
 print(data.sound.right); --> 80
-print(data.screen.caption); --> Window's caption
+print(data.screen.caption); --> Windows caption
 print(data.screen.focused); --> true
 ````
 

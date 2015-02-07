@@ -46,7 +46,7 @@ right=80
 [screen]
 width=960
 height=544
-caption=Window's caption
+caption=Windows caption
 focused=true
 ````
 

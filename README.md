@@ -1,5 +1,6 @@
 #LIP - Love INI Parser#
 *Love INI Parser* is a tiny Lua library allowing Love2D to handle *.ini* files.
+
 It is a fork of [Lua INI Parser](https://github.com/Dynodzzo/Lua_INI_Parser) to make it compatible with Love2D.
 
 #Usage#
@@ -90,7 +91,7 @@ print(data[2][3]); --> true
 
 #Licence#
 This project is under [MIT Licence][]<br />
-Copyright © Carreras Nicolas
+Copyright © Carreras Nicolas, Ruairidh Carmichael
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal

@@ -30,10 +30,11 @@ local LIP = {};
 --@return The table containing all data from the INI file. [table]
 function LIP.load(fileName)
 	assert(type(fileName) == 'string', 'Parameter "fileName" must be a string.');
-	local file = assert(io.open(fileName, 'r'), 'Error loading file : ' .. fileName);
+	local lovefile = love.filesystem.newFile(fileName)
+	local file = assert(lovefile:open('r'), 'Error loading file : ' .. fileName);
 	local data = {};
 	local section;
-	for line in file:lines() do
+	for line in love.filesystem.lines(fileName) do
 		local tempSection = line:match('^%[([^%[%]]+)%]$');
 		if(tempSection)then
 			section = tonumber(tempSection) and tonumber(tempSection) or tempSection;
@@ -54,7 +55,7 @@ function LIP.load(fileName)
 			data[section][param] = value;
 		end
 	end
-	file:close();
+	lovefile:close();
 	return data;
 end
 
@@ -64,17 +65,18 @@ end
 function LIP.save(fileName, data)
 	assert(type(fileName) == 'string', 'Parameter "fileName" must be a string.');
 	assert(type(data) == 'table', 'Parameter "data" must be a table.');
-	local file = assert(io.open(fileName, 'w+b'), 'Error loading file :' .. fileName);
+	local lovefile = love.filesystem.newFile(fileName)
+	local file = assert(lovefile:open('w+b'), 'Error loading file :' .. fileName);
 	local contents = '';
 	for section, param in pairs(data) do
-		contents = contents .. ('[%s]\n'):format(section);
+		contents = contents .. ('[%s]\r\n'):format(section);
 		for key, value in pairs(param) do
-			contents = contents .. ('%s=%s\n'):format(key, tostring(value));
+			contents = contents .. ('%s=%s\r\n'):format(key, tostring(value));
 		end
-		contents = contents .. '\n';
+		contents = contents .. '\r\n';
 	end
-	file:write(contents);
-	file:close();
+	lovefile:write(contents);
+	lovefile:close();
 end
 
 return LIP;

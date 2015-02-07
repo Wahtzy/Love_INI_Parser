@@ -19,7 +19,7 @@
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
 --]]
---- Lua INI Parser.
+--- Love INI Parser.
 -- It has never been that simple to use INI files with Love2D.
 --@author Dynodzzo, VideahGams
 

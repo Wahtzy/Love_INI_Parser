@@ -1,8 +1,9 @@
-#LIP - Lua INI Parser#
-*Lua INI Parser* is a tiny Lua library allowing to handle *.ini* files.
+#LIP - Love INI Parser#
+*Love INI Parser* is a tiny Lua library allowing Love2D to handle *.ini* files.
+It is a fork of [Lua INI Parser](https://github.com/Dynodzzo/Lua_INI_Parser) to make it compatible with Love2D.
 
 #Usage#
-Add [LIP.lua](https://github.com/Dynodzzo/Lua_INI_Parser/blob/master/LIP.lua) file into your project folder.<br />
+Add [LIP.lua](https://github.com/VideahGams/Love_INI_Parser/blob/master/LIP.lua) file into your project folder.<br />
 Call it using __require__ function.<br />
 It will return a table containing read & write functions.
 
